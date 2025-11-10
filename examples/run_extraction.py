@@ -28,7 +28,7 @@ except ImportError:
 # --- 主要設定  ---
 # ==============================================================================
 
-# 1. 選擇 LLM Provider (eg."openai" or "ollama")
+# 1. 選擇 LLM Provider  ("openai" or "ollama")
 PROVIDER = "openai" 
 
 # 2. 根據 Provider 選擇模型 (eg. "gpt-4o" or "mistral:latest") 

@@ -54,8 +54,22 @@ OPENAI_API_KEY="enter your api key"
 OLLAMA_HOST="http://localhost:11434"
 ```
 
-
 ## 3. How to Execute
+### Step 1: Place Your Files (there are some default examples)
+Put all the `.txt` or `.pdf` files you want to analyze into the `examples` folder.
+
+### Step 2: Select Your LLM
+Open the file **`examples/run_extraction.py`** in your code editor.
+
+At the top, you will find the main settings. Edit the `PROVIDER` and `MODEL_NAME` variables to choose which LLM you want to use.
+**Example: To use Ollama's Mistral**
+```bash
+# 1. Choose LLM Provider ("openai" or "ollama")
+PROVIDER = "ollama" 
+
+# 2. Choose Model Name (e.g., "gpt-4o" or "mistral:latest") 
+MODEL_NAME = "mistral:latest"
+
 ```bash
 # Example: To use Ollama's mistral
 PROVIDER = "ollama" 
@@ -69,4 +83,21 @@ MODEL_NAME = "gpt-4o"
 python examples/run_extraction.py
 ```
 
+## 3. How to Execute
+```bash
+### Step 1: Place Your Files
+Put all the `.txt` or `.pdf` files you want to analyze into the `examples` folder.
+
+### Step 2: Select Your LLM
+Open the file **`examples/run_extraction.py`** in your code editor.
+
+At the very top, you will find the main settings. Edit the `PROVIDER` and `MODEL_NAME` variables to choose which LLM you want to use.
+
+**Example: To use Ollama's Mistral**
+```python
+# 1. Choose LLM Provider ("openai" or "ollama")
+PROVIDER = "ollama" 
+
+# 2. Choose Model Name (e.g., "gpt-4o" or "mistral:latest") 
+MODEL_NAME = "mistral:latest"
 
