@@ -3,9 +3,9 @@
 This project is a modular Knowledge Graph (KG) extraction pipeline designed to extract structured information from plain text (.txt) or PDF files.
 
 The pipeline is based on the 3-step process defined :
-**Step 1: Ontology Filtering** (using an LLM)
-**Step 2: NER + Entity Linking** (using Flair NER and the Wikidata API)
-**Step 3: Relation Extraction (NRE)** (using an LLM)
+1. **Step 1: Ontology Filtering** (using an LLM)
+2. **Step 2: NER + Entity Linking** (using Flair NER and the Wikidata API)
+3. **Step 3: Relation Extraction (NRE)** (using an LLM)
 
 This project allows you to freely switch between LLM engines like OpenAI (e.g., GPT-4o) or local Ollama models (e.g., Llama 3, Mistral) using the "master switch" in `examples/run_extraction.py`.
 
