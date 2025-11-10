@@ -13,7 +13,7 @@ class NERLinker:
 
     def __init__(self, ner_model_path: str):
         self.tagger = self._load_ner_model(ner_model_path)
-        self.wikidata_headers = {'User-Agent': 'FlexiKG/1.0 (your_email@example.com)'}
+        self.wikidata_headers = {'User-Agent': 'Light_KG/1.0 (your_email@example.com)'}
         self.wikidata_api_endpoint = "https://www.wikidata.org/w/api.php"
         self.total_linking_time = 0.0
 
@@ -34,7 +34,7 @@ class NERLinker:
         Output: entities
         """
         if not self.tagger:
-            print("  - Step 2 (NER): NER 模型未載入，跳過")
+            print("  - Step 2 (NER): NER 模型未載入")
             return []
             
         sentence = Sentence(text)
@@ -43,7 +43,7 @@ class NERLinker:
         
         raw_entity_texts = [entity.text for entity in entities]
         if len(raw_entity_texts) < 2:
-            print(f"  - Step 2 (NER): 找到少於 2 個實體，跳過")
+            print(f"  - Step 2 (NER): 找到少於 2 個實體")
             return []
             
         print(f"  - Step 2 (NER): 找到 {len(raw_entity_texts)} 個原始實體: {raw_entity_texts[:5]}...")
@@ -51,7 +51,7 @@ class NERLinker:
 
     def _get_wikidata_info_from_api(self, entity_name: str) -> Dict[str, Any]:
         """
-        [Step 2.5] 使用官方 Wikidata API 和計分排序
+        [Step 2.5] 使用 Wikidata API 和設計候選排序
         """
         params = {
             'action': 'wbsearchentities',
@@ -106,7 +106,7 @@ class NERLinker:
                     "wikidata_id": q_id
                 }
             else:
-                print(f"    - API 未找到 '{entity_name}' 的【高可信度】候選")
+                print(f"    - API 未找到 '{entity_name}' 的候選")
                 return None
 
         except requests.exceptions.RequestException as e:
@@ -115,7 +115,7 @@ class NERLinker:
 
     def link_entities(self, text: str) -> NERLinkResult:
         """
-        [Step 2 & 2.5] 執行 NER 並進行實體連結。
+        [Step 2 & 2.5] 執行 NER 並進行實體連結
         """
         # Step 2: NER
         raw_entity_texts = self._get_ner_entities(text)

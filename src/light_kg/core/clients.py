@@ -30,7 +30,7 @@ class BaseLLMClient(ABC):
 
 class OpenAIClient(BaseLLMClient):
     """
-    OpenAI API 客戶端。
+    OpenAI API 客戶端
     """
     def __init__(self, model_name: str, api_key: str):
         super().__init__(model_name)
@@ -59,7 +59,7 @@ class OpenAIClient(BaseLLMClient):
 
 class OllamaClient(BaseLLMClient):
     """
-    Ollama (Mistral) 客戶端。
+    Ollama 客戶端
     """
     def __init__(self, model_name: str):
         super().__init__(model_name)

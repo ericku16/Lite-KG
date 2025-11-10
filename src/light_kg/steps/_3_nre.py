@@ -43,7 +43,6 @@ T16. Adhere strictly to these rules. Non-compliance will result in termination.
 
     def extract_relations(self, text_chunk: str, entities: List[str]) -> List[List[str]]:
         """
-        執行 NRE。
         Input: shorter texts from step 1 and entities from step 2
         Output: list of triples [["s", "p", "o"], ...]
         """
