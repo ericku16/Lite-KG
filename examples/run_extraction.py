@@ -28,10 +28,10 @@ except ImportError:
 # --- 主要設定  ---
 # ==============================================================================
 
-# 1. 選擇 LLM Provider: "openai" 或 "ollama"
+# 1. 選擇 LLM Provider (eg."openai" or "ollama")
 PROVIDER = "openai" 
 
-# 2. 根據 Provider 選擇模型
+# 2. 根據 Provider 選擇模型 (eg. "gpt-4o" or "mistral:latest") 
 MODEL_NAME = "gpt-4o" if PROVIDER == "openai" else "mistral:latest"
 
 # 3. 設定 NER 路徑
@@ -56,7 +56,7 @@ def main():
     api_key = os.getenv("OPENAI_API_KEY")
 
     if PROVIDER == "openai" and not api_key:
-        print("❌ 錯誤: 'openai' provider 需要 OPENAI_API_KEY，請在 .env 檔案中設定")
+        print("❌ 錯誤: 'openai' provider 需要 OPENAI_API_KEY 請在 .env 檔案中設定")
         return
 
     # --- 檢查路徑 ---
@@ -68,7 +68,7 @@ def main():
 
     if not os.path.exists(DOCUMENTS_FOLDER):
         print(f"⚠️ 警告: 文件資料夾 '{DOCUMENTS_FOLDER}' 不存在")
-        print("  正在為您建立資料夾，請在執行前放入 .txt 或 .pdf 檔案")
+        print("  正在為您建立資料夾 請在執行前放入 .txt 或 .pdf 檔案")
         os.makedirs(DOCUMENTS_FOLDER, exist_ok=True)
         return
 
