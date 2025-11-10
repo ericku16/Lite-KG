@@ -27,14 +27,14 @@ conda activate light_kg
 pip install -r requirements.txt
 ```
 
-# Option A: Use the Default Model (Recommended)
+# Option A: Use the Default NER-Model (Recommended)
 The default model (final-model.pt) is required for the project to run out-of-the-box but is too large to be hosted on GitHub (it is ignored by .gitignore). You must download it manually.
 
 1. [Download the Default Model (final-model.pt) here](https://drive.google.com/drive/folders/18D1K_IQxwZPtPt7V6Ni_tOljvKazWfS9?usp=sharing)
 2. After downloading, create a model folder in the project's root directory (at the same level as src).
 3. Place the final-model.pt file inside this model folder.
 
-# Option B: Use Your Own Custom-Trained Model
+# Option B: Use Your Own Custom-Trained NER-Model
 This project can load any Flair-trained .pt model.
 
 1. Place your own model (e.g., my_ner_model.pt) into the model/ folder.
