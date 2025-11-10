@@ -84,7 +84,7 @@ python examples/run_extraction.py
 ```
 
 ## 3. How to Execute
-```bash
+
 ### Step 1: Place Your Files
 Put all the `.txt` or `.pdf` files you want to analyze into the `examples` folder.
 
@@ -94,10 +94,13 @@ Open the file **`examples/run_extraction.py`** in your code editor.
 At the very top, you will find the main settings. Edit the `PROVIDER` and `MODEL_NAME` variables to choose which LLM you want to use.
 
 **Example: To use Ollama's Mistral**
-```python
+```bash
 # 1. Choose LLM Provider ("openai" or "ollama")
 PROVIDER = "ollama" 
 
 # 2. Choose Model Name (e.g., "gpt-4o" or "mistral:latest") 
 MODEL_NAME = "mistral:latest"
 
+# 3. Run the Program
+python examples/run_extraction.py
+```
