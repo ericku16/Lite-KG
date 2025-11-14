@@ -17,7 +17,7 @@ sys.path.insert(0, src_root)
 
 try:
     # 導入 Extractor 
-    from light_kg.extractor import Extractor
+    from light_kg.extractor import Extractor   # type: ignore[reportMissingImports]
 except ImportError:
     print("❌ 錯誤: 無法導入 'light_kg' 模組")
     print(f"  請確保 'src' 目錄位於: {src_root}")

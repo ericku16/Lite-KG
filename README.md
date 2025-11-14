@@ -1,4 +1,4 @@
-# Light_KG (Lightweight Knowledge Graph Extractor)
+# Lite_KG (Lightweight Knowledge Graph Extractor)
 
 This project is a **lightweight** and modular Knowledge Graph (KG) extraction pipeline, specialized for the **automotive supply chain**. It is designed to extract structured information from plain text (.txt) or PDF files and suitable for use with local LLMs via **Ollama**.
 
@@ -15,13 +15,13 @@ This project allows you to freely switch between LLM engines like OpenAI (e.g., 
 ## 1. Clone the Project
 ```bash
 git clone [https://github.com/ericku16/Light_KG.git]
-cd light_kg
+cd lite_kg
 
 # Create a new conda environment 
-conda create -n light_kg python=3.10
+conda create -n lite_kg python=3.10
 
 # Activate the environment
-conda activate light_kg
+conda activate lite_kg
 
 # Install all required packages from requirements.txt
 pip install -r requirements.txt
