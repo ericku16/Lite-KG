@@ -63,7 +63,6 @@ def main():
     if not os.path.exists(NER_MODEL_PATH):
         print(f"Error: NER model path does not exist: {NER_MODEL_PATH}")
         print(f"Please update the 'NER_MODEL_PATH' variable in 'examples/run_extraction.py")
-        print(f"The model file should be located at: {os.path.join(project_root, "model", "your_model.pt")}")
         return
 
     if not os.path.exists(DOCUMENTS_FOLDER):
