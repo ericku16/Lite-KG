@@ -17,7 +17,7 @@ sys.path.insert(0, src_root)
 
 try:
     # Import Extractor
-    from light_kg.extractor import Extractor   # type: ignore[reportMissingImports]
+    from lite_kg.extractor import Extractor   # type: ignore[reportMissingImports]
 except ImportError:
     print("Error: Could not import the 'lite-kg' module.")
     print(f"Please ensure the 'src' directory is located at: {src_root}")
@@ -35,7 +35,7 @@ PROVIDER = "openai"
 MODEL_NAME = "gpt-4o" if PROVIDER == "openai" else "mistral:latest"
 
 # 3. Set NER Path
-NER_MODEL_PATH = os.path.join(project_root, "model", "ner_model", "final-model.pt")
+NER_MODEL_PATH = os.path.join(project_root, "model", "your_model.pt")
 
 # 4. Set Folder Paths 
 DOCUMENTS_FOLDER = os.path.join(script_dir, "example")

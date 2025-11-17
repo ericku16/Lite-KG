@@ -28,11 +28,12 @@ pip install -r requirements.txt
 ```
 
 ###  Use Your Own Custom-Trained NER-Model
-This project can load any Flair-trained .pt model.
+This project requires you to **provide your own custom-trained Flair NER model** (a `.pt` file). The `model/` directory is ignored by `.gitignore`.
 
-1. Place your own model (e.g., my_ner_model.pt) into the model/ folder.
-2. Open examples/run_extraction.py.
-3. Change the NER_MODEL_PATH variable to point to your new file's name.
+1. Create a `model` folder in the project's **root directory** (at the same level as `src`).
+2. Place your custom-trained `.pt` file (e.g., `my_ner_model.pt`) inside this `model` folder.
+3. Open examples/run_extraction.py.
+4. Change the `NER_MODEL_PATH` variable to match the name of your model file.
 
 
 ## 2. Configuration
