@@ -67,6 +67,17 @@ MODEL_NAME = "mistral:latest"
 # 3. Run the Program
 python examples/run_extraction.py
 ```
+## Citing
+Please cite the following if you utilize Lite-KG in your work:
+```bash
+@inproceedings{ho2025lite,
+  title={{LiteKG}: a lightweight {LLM}-assisted framework for domain-specific knowledge graph construction},
+  author={Ho, Yi-Mo and Ku, Wei-Pin and Hou, Pei-Yu},
+  booktitle={2025 IEEE International Conference on Big Data (BigData)},
+  year={2025},
+  organization={IEEE}
+}
+```
 ## License
 The MIT License.
 
